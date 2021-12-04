@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+:root{
+    --background: #0d1a2d;
+    --card_background: #15273f;
+    --primary_color: #c6cdd4;
+    --secondary_color: #526988;
+    --vibrant_blue: #2db1b7;
+    --margin_items: 12px;
+
+    --small: 12px;
+    --medium: 14px;
+    --big: 16px;
+}
+
+body{
+    background-color: var(--background);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: auto 260px auto;
+    grid-template-rows: auto 75% auto;
+}
+
+.item__container{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background-color: var(--card_background);
+
+    border-radius: 10px;
+    padding: 16px;
+}
+    .item__container img{
+        width: 100%;
+        border-radius: 5px;
+    }
+        .item__container img:hover{
+            background-image: url(/images/icon-view.svg)   
+        }
+.item__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+    .item__text h2{
+        color: var(--primary_color);
+        font-size: var(--big);
+        margin-top: var(--margin_items);
+    }
+    .item__text .secondary__text{
+        color: var(--secondary_color);
+        font-size: var(--small);
+        margin-top: var(--margin_items);
+    }
+    .price__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: var(--small);
+        font-weight: 600;
+        color: var(--secondary_color);
+        margin: var(--margin_items) 0;
+    }
+        .price__container p{
+            display: flex;
+        }
+        .price__container p span{
+            margin-right: 4px;
+        }
+        .price__container p span img{
+            height: 12px;
+        }
+        .price__container p:first-child{
+            color: var(--vibrant_blue);
+        }
+
+.autor__container{
+    display: flex;
+    align-items: center;
+    padding: 10px 0 0 0;
+    margin: 8px  0 0 0;
+    border-top: 1px solid var(--secondary_color);
+    height: 30px;
+    color: var(--secondary_color);
+    font-size: var(--small);
+}
+    .autor__container img{
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: 1px solid white;
+        margin-right: 8px;
+    }
+    .autor__container p a{
+        color: var(--primary_color);
+        text-decoration: none;
+    }
+    .autor__container p a:hover{
+        text-decoration: underline;
+        color: var(--vibrant_blue);
+    }
